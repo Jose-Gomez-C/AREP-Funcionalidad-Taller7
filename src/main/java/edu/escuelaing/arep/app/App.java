@@ -11,7 +11,7 @@ public class App {
 		port(getPort());
 		Gson gson = new Gson();
 		port(getPort());
-		secure("keystores/ecikeystore.p12", "Hola123", null, null);
+		secure("keystores/ecikeystore.p12", "Hola123", "keystores/myTrustStoreLogin", "Hola123");
 		get("/respuesta",(request, response) -> {
 			System.out.println("Llegue");
 			return "<h4>Conectado con otra app</h4>"; 
